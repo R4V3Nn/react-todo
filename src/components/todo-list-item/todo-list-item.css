@@ -22,3 +22,12 @@
     font-weight: bold;
     color: steelblue;
   }
+
+  .important {
+    font-weight: bold;
+    color: tomato;
+  }
+
+  .done {
+    text-decoration: line-through;
+  }
