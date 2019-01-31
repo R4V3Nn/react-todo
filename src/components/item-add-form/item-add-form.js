@@ -21,7 +21,10 @@ export default class ItemAddForm extends Component {
             e.preventDefault();
 
             this.props.onItemAdded(this.state.label);
-            document.getElementById('taskInput').value = '';
+            this.setState({
+                label: ''
+            })
+            
         }
 
     };
@@ -36,7 +39,8 @@ export default class ItemAddForm extends Component {
                         id="taskInput"
                         className="form-control"
                         onChange={this.onLabelChange}
-                        placeholder="New task"/>
+                        placeholder="New task"
+                        value={this.state.label}/>
                 <button className="btn btn-outline-secondary">
                 Add Item
                 </button>
